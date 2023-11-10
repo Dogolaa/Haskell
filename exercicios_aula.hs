@@ -33,3 +33,9 @@ maior a b
     | a < b = b
     |otherwise = a
 
+adicionaSemRepeticao :: [Int] -> Int -> [Int]
+adicionaSemRepeticao [] b = [b]
+adicionaSemRepeticao (a:x) b
+    | a == b    = (a:x)
+    | otherwise = a : adicionaSemRepeticao x b
+
