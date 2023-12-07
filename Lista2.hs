@@ -40,6 +40,17 @@ mapSquares f a = map f a
 
 --Ex 5
 
+cartesiano:: [Int] -> [Int] -> [(Int, Int)]
+cartesiano a b = (cartesiano2 a b)++(cartesiano2 b a)
+
+cartesiano2:: [Int] -> [Int] -> [(Int, Int)]
+cartesiano2 [] _ = []
+cartesiano2 _ [] = []
+cartesiano2 (a:x) (b:y) = ((montaCartesiano a (b:y))++(cartesiano2 x (b:y)))
+
+montaCartesiano:: Int -> [Int] -> [(Int, Int)]
+montaCartesiano a [b] = [(a,b)] 
+montaCartesiano a (b:x) = (a,b):(montaCartesiano a x)
 
 
 --Ex 6
