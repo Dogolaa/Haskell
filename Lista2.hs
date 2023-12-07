@@ -1,3 +1,8 @@
+--Lucas Dogo de Souza Pezzuto
+--2020.1.08.026
+--Lista 2
+
+
 --Ex 1
 divisores :: Int -> [Int]
 divisores n = [x | x <- [1..n-1], n `mod` x == 0]
